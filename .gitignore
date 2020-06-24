@@ -1,0 +1,15 @@
+
+mot8K01/.vs/mot8K01/v16/.suo
+*.db
+*.ipch
+*.dll
+*.exe
+*.exp
+*.lib
+*.filters
+*.user
+*.obj
+*.log
+*.tlog
+*.pdb
+*.res
