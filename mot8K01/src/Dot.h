@@ -10,5 +10,6 @@ public:
 
 	glm::vec2 center;
 	ofColor color;
+	float globalLevel;
 };
 

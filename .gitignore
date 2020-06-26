@@ -13,3 +13,6 @@ mot8K01/.vs/mot8K01/v16/.suo
 *.tlog
 *.pdb
 *.res
+*.db-shm
+*.db-wal
+*.opendb
