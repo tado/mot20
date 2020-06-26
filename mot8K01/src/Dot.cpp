@@ -6,10 +6,10 @@ Dot::Dot(glm::vec2 _center) {
 }
 
 void Dot::update() {
-	float div = 100.0 / ofGetElapsedTimef() + 0.2;
-	float speed = 10000.0 / ofGetElapsedTimef() * 0.1 + 0.5;
-	float shiftX = -ofGetElapsedTimef() * 0.5;
-	float shiftY = -ofGetElapsedTimef() * 0.7;
+	float div = 200.0 / ofGetElapsedTimef() + 1.0;
+	float speed = 20000.0 / ofGetElapsedTimef() * 0.1 + 0.5;
+	float shiftX = -ofGetElapsedTimef() * 0.0;
+	float shiftY = ofGetElapsedTimef() * 0.5;
 	color.r = ofNoise(center.x / ofGetWidth() * div + shiftX, center.y / ofGetWidth() * div + shiftY, ofGetElapsedTimef() * speed) * 255;
 	color.g = ofNoise(center.x / ofGetWidth() * div + shiftX, center.y / ofGetWidth() * div + shiftY, ofGetElapsedTimef() * speed - 0.08) * 255;
 	color.b = ofNoise(center.x / ofGetWidth() * div + shiftX, center.y / ofGetWidth() * div + shiftY, ofGetElapsedTimef() * speed - 0.16) * 255;
@@ -23,8 +23,8 @@ void Dot::update() {
 
 void Dot::draw() {
 	int baseColor = 0;
-	float r = ofGetWidth() / 1000.0;
-	float shift = -r / 4.2;
+	float r = ofGetWidth() / 640.0;
+	float shift = -r / 3.0;
 	ofSetCircleResolution(64);
 	ofEnableBlendMode(OF_BLENDMODE_ADD);
 	ofPushMatrix();
