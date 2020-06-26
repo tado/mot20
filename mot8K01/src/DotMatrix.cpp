@@ -1,7 +1,7 @@
 #include "DotMatrix.h"
 
 DotMatrix::DotMatrix(glm::vec2 _div) {
-	float margin = ofGetWidth() / 128.0;
+	float margin = ofGetWidth() / 64.0;
 	float screenWidth = ofGetWidth() - margin * 2;
 	float screenHeight = ofGetHeight() - margin * 2;
 	div = _div;
