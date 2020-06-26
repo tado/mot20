@@ -5,6 +5,9 @@ void ofApp::setup() {
 	ofSetFrameRate(60);
 	ofBackground(0);
 	ofToggleFullscreen();
+	//ofSetWindowShape(3840 * 2, 2160 * 2); //8K
+	ofSetWindowShape(3840, 2160); //4K
+	ofSetWindowPosition(0, 0);
 	ofHideCursor();
 	int div = 35;
 	dotMatrix = new DotMatrix(glm::vec2(div, int(div / 1.6)));

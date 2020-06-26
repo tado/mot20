@@ -27,7 +27,7 @@ void Dot::update() {
 
 void Dot::draw() {
 	int baseColor = 0;
-	float r = ofGetWidth() / 400.0;
+	float r = ofGetWidth() / 800.0;
 	float shift = -r / 2.5;
 	ofSetCircleResolution(64);
 	ofEnableBlendMode(OF_BLENDMODE_ADD);
