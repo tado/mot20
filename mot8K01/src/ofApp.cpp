@@ -6,7 +6,6 @@ void ofApp::setup() {
 	ofBackground(0);
 	ofToggleFullscreen();
 	ofHideCursor();
-	//dotMatrix = new DotMatrix(glm::vec2(17, 9));
 	int div = 31;
 	dotMatrix = new DotMatrix(glm::vec2(div, int(div / 1.6)));
 }
