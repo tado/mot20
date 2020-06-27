@@ -7,8 +7,8 @@ Dot::Dot(glm::vec2 _center) {
 }
 
 void Dot::update() {
-	float div = 240.0 / ofGetElapsedTimef() + 1.0;
-	float speed = 120.0 / ofGetElapsedTimef() + 0.5;
+	float div = 480.0 / ofGetElapsedTimef() + 1.0;
+	float speed = 240.0 / ofGetElapsedTimef() + 0.5;
 	float shiftX = -ofGetElapsedTimef() * 0.2;
 	float shiftY = ofGetElapsedTimef() * 0.5;
 	color.r = ofNoise(center.x / ofGetWidth() * div + shiftX, center.y / ofGetWidth() * div + shiftY, ofGetElapsedTimef() * speed) * 255;
