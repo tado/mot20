@@ -15,13 +15,15 @@ void Dot::update() {
 	color.g = ofNoise(center.x / ofGetWidth() * div + shiftX, center.y / ofGetWidth() * div + shiftY, ofGetElapsedTimef() * speed + 0.12) * 255;
 	color.b = ofNoise(center.x / ofGetWidth() * div + shiftX, center.y / ofGetWidth() * div + shiftY, ofGetElapsedTimef() * speed + 0.24) * 255;
 
-	globalLevel += 1.0 / 600.0;
-	if (globalLevel > 1.0) {
-		globalLevel = 1.0;
-	}
-	shiftLevel += 1.0 / 1200.0;
-	if (shiftLevel > 1.0) {
-		shiftLevel = 1.0;
+	if (ofGetElapsedTimef() > 6.0) {
+		globalLevel += 1.0 / 600.0;
+		if (globalLevel > 1.0) {
+			globalLevel = 1.0;
+		}
+		shiftLevel += 1.0 / 1200.0;
+		if (shiftLevel > 1.0) {
+			shiftLevel = 1.0;
+		}
 	}
 }
 

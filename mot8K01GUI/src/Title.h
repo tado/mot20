@@ -8,5 +8,6 @@ public:
 	void draw();
 
 	ofImage titleImg;
+	float titleLevel;
 };
 
