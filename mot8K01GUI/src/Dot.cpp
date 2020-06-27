@@ -7,8 +7,8 @@ Dot::Dot(glm::vec2 _center) {
 }
 
 void Dot::update() {
-	float div = 120.0 / ofGetElapsedTimef() + 1.0;
-	float speed = 60.0 / ofGetElapsedTimef() + 0.5;
+	float div = 240.0 / ofGetElapsedTimef() + 1.0;
+	float speed = 120.0 / ofGetElapsedTimef() + 0.5;
 	float shiftX = -ofGetElapsedTimef() * 0.2;
 	float shiftY = ofGetElapsedTimef() * 0.5;
 	color.r = ofNoise(center.x / ofGetWidth() * div + shiftX, center.y / ofGetWidth() * div + shiftY, ofGetElapsedTimef() * speed) * 255;
@@ -20,7 +20,7 @@ void Dot::update() {
 		if (globalLevel > 1.0) {
 			globalLevel = 1.0;
 		}
-		shiftLevel += 1.0 / 1200.0;
+		shiftLevel += 1.0 / 2400.0;
 		if (shiftLevel > 1.0) {
 			shiftLevel = 1.0;
 		}
@@ -33,7 +33,7 @@ void Dot::draw() {
 	float shift = -r / 2.5;
 	ofSetCircleResolution(64);
 	ofPushMatrix();
-	float shiftLoc = color.getBrightness() / 255.0 * 6.0 * shiftLevel;
+	float shiftLoc = color.getBrightness() / 255.0 * (ofGetWidth() / 1000.0) * shiftLevel;
 	ofTranslate(center.x + shiftLoc, center.y);
 	
 	ofScale(globalLevel, globalLevel);
