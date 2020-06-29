@@ -2,7 +2,11 @@
 
 Title::Title() {
 	titleImg.load("title.png");
+#ifdef SHOW8K
+
+#else
 	titleImg.resize(titleImg.getWidth() / 2.0, titleImg.getHeight() / 2.0);
+#endif
 	titleLevel = 0.0;
 }
 
@@ -20,6 +24,6 @@ void Title::draw() {
 		}
 	}
 
-	ofSetColor(255 * titleLevel);
+	ofSetColor(255, 255 * titleLevel);
 	titleImg.draw(ofGetWidth() / 2 - titleImg.getWidth() / 2, ofGetHeight() / 2 - titleImg.getHeight()/2);
 }

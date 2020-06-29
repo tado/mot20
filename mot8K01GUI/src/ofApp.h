@@ -1,9 +1,13 @@
+// #define SHOW8K
+
 #pragma once
 
 #include "ofMain.h"
 #include "DotMatrix.h"
 #include "Gui.h"
 #include "Title.h"
+#include "SoundTrack.h"
+#include "FadeOut.h"
 
 class ofApp : public ofBaseApp {
 
@@ -27,4 +31,6 @@ public:
 	DotMatrix* dotMatrix;
 	Gui* gui;
 	Title* title;
+	SoundTrack* sound;
+	FadeOut* fadeOut;
 };

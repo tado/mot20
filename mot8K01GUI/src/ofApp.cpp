@@ -5,13 +5,21 @@ void ofApp::setup() {
 	ofSetFrameRate(60);
 	ofBackground(0);
 	ofToggleFullscreen();
-	//ofSetWindowShape(3840 * 2, 2160 * 2); //8K
+#ifdef SHOW8K
+	ofSetWindowShape(3840 * 2, 2160 * 2); //8K
+#else
 	ofSetWindowShape(3840, 2160); //4K
+#endif
+	
+
 	ofSetWindowPosition(0, 0);
 	int div = 35;
 	dotMatrix = new DotMatrix(glm::vec2(div, int(div / 1.6)));
 	gui = new Gui();
 	title = new Title();
+	sound = new SoundTrack();
+	fadeOut = new FadeOut();
+	sound->play();
 }
 
 //--------------------------------------------------------------
@@ -24,6 +32,7 @@ void ofApp::draw() {
 	dotMatrix->draw();
 	title->draw();
 	gui->draw();
+	fadeOut->draw();
 }
 
 //--------------------------------------------------------------
